@@ -1,0 +1,43 @@
+
+\documentclass{RelatorioCITE}
+\usepackage{lipsum}
+
+\graphicspath{ {./fig/} }
+
+\include{config}
+
+\begin{document}
+
+\maketitle
+
+% Muda a contagem das figuras para sequencia
+\counterwithout{figure}{chapter}
+\counterwithout{table}{chapter}
+
+\tableofcontents{}
+
+\inicioRelatorio
+
+\input{./docs/01-relatorio}
+
+\inicioAnexo
+\input{./docs/anexo-01}
+\novoAnexo
+\input{./docs/anexo-02}
+\novoAnexo
+\input{./docs/anexo-03}
+\novoAnexo
+\input{./docs/anexo-04}
+
+\inicioReferencias
+
+\bibliographystyle{abntex2-num}
+\bibliography{./bib/referencias.bib}
+
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
